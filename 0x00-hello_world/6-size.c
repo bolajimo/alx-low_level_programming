@@ -1,3 +1,10 @@
-/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
-(.text+0x24): undefined reference to `main'
-collect2: error: ld returned 1 exit status
+#include <stdio.h>
+/**
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0 (Success)
+ *     */
+int main(void)
+{
+		printf("with proper grammar, but the outcome is a piece of art,\n");
+			return (0);
