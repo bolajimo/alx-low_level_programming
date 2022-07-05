@@ -17,5 +17,5 @@ void print_times_table(int n);
 
 #endif
 
-main.h file
+ main.h file
 
