@@ -1,6 +1,6 @@
 /*
  * File: 0-sum_them_all.c
- * Auth: Teroxlab
+ * Auth: Ojo Moses
  */
 
 #include "variadic_functions.h"
