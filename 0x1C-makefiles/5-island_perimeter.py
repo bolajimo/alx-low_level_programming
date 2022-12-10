@@ -1,40 +1,28 @@
 #!/usr/bin/python3
 """
-5-main
+module for perimeter of island
 """
 
 
 def island_perimeter(grid):
-    """return a island's square"""
-    ln = len(grid[1])
-    llen = len(grid)
-    square = 0
-    for a in range(len(grid)):
-        for b in range(len(grid[a])):
-            if grid[a][b] == 1:
-                if b < ln - 1:
-                    # derecha
-                    if grid[a][b + 1] == 0:
-                        square += 1
-                elif b == ln - 1:
-                    square += 1
-                if b > 0:
-                    # izquierda
-                    if grid[a][b - 1] == 0:
-                        square += 1
-                elif b == 0:
-                    square += 1
-                if a < llen - 1:
-                    # abajo
-                    if grid[a + 1][b] == 0:
-                        square += 1
-                elif a == llen - 1:
-                    square += 1
-                if a > 0:
-                    # arriba
-                    if grid[a - 1][b] == 0:
-                        square += 1
-                elif a == 0 or a == llen:
-                    square += 1
-    return square
+    """returns the perimeter of the island
+    Args:
+         grid (list) = list of integers
+    """
+
+    width = len(grid[0])
+    height = len(grid)
+    edges = 0
+    size = 0
+
+    for i in range(height):
+        for j in range(width):
+            if grid[i][j] == 1:
+                size += 1
+                # checking for boundery or a lake
+                if (j > 0 and grid[i][j - 1] == 1):
+                    edges += 1
+                if (i > 0 and grid[i - 1][j] == 1):
+                    edges += 1
+    return size * 4 - edges * 2
     
